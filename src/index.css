@@ -9,6 +9,11 @@ body{
   display:none;
 }
 
+#tasklist::-webkit-scrollbar-thumb{
+  background-color: rgb(143,143,143);
+  border-radius: 40px;
+}
+
 input , textarea , select{
   background-color: white;
   color:black;
