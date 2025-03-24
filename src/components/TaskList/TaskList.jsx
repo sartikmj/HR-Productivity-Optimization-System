@@ -24,6 +24,7 @@ const TaskList = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi cum dolore recusandae sapiente nihil?
             </p>
         </div>
+
         <div className='flex-shrink-0 h-full w-[350px] bg-green-400 p-5 rounded-xl '> 
             <div className='flex justify-between items-center'>
                 <h3 className='bg-red-600 text-small px-3 py-1 rounded'>High</h3>
@@ -34,6 +35,7 @@ const TaskList = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi cum dolore recusandae sapiente nihil?
             </p>
         </div>
+
         <div className='flex-shrink-0 h-full w-[350px] bg-yellow-400 p-5 rounded-xl '> 
             <div className='flex justify-between items-center'>
                 <h3 className='bg-red-600 text-small px-3 py-1 rounded'>High</h3>
@@ -44,6 +46,7 @@ const TaskList = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quasi cum dolore recusandae sapiente nihil?
             </p>
         </div>
+        
         <div className='flex-shrink-0 h-full w-[350px] bg-pink-400 p-5 rounded-xl '> 
             <div className='flex justify-between items-center'>
                 <h3 className='bg-red-600 text-small px-3 py-1 rounded'>High</h3>
