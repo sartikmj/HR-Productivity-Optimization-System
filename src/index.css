@@ -8,3 +8,8 @@ body{
 #tasklist::-webkit-scrollbar{
   display:none;
 }
+
+input , textarea , select{
+  background-color: white;
+  color:black;
+}
