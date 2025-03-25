@@ -14,6 +14,8 @@ const App = () => {
   // },)
   
   const [user , setUser] = useState(null)
+  const authData = useContext(AuthContext) //to use Context
+  console.log(authData?.employees)
 
   //handle login , check if email and password matches
   const handleLogin = (email,password) => {
@@ -31,8 +33,7 @@ const App = () => {
   // handleLogin('user@me.com',123); //we will passs this handle login inside Login component
 
 
-  const authData = useContext(AuthContext) //to use Context
-  console.log(authData.employees)
+
 
   return (
     <>
