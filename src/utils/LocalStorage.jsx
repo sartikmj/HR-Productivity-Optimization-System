@@ -1,4 +1,4 @@
-[
+const employee = [
     {
         "id": 1,
         "email": "employee1@example.com",
@@ -142,3 +142,26 @@ const admin = [{
     "email": "admin@example.com",
     "password": "123"
   }]
+
+//function to set Local storage , exporting it as well as
+
+export const setLocalStorage = () => {
+    //method used to store data in local storage of browser
+    localStorage.setItem('employees',JSON.stringify(employee)) //'name of property' , 'data' 
+    //JSON.stringify() , converts  Javascript Object to JSON string.
+
+    localStorage.setItem('admin',JSON.stringify(admin))
+}
+
+
+//function to get Local Storage , exporting it as well as
+
+export const getLocalStorage = () => {
+    // const data = localStorage.getItem('employees') //employees is the data we stored into as property
+    // console.log(JSON.parse(data)) // JSON.parse() convert data from string into object , so we will get data on console in form of Array 
+
+    const employees = JSON.parse(localStorage.getItem('employees'))
+    const admin = JSON.parse(localStorage.getItem('admin'))
+
+    console.log(employees,admin)
+}
