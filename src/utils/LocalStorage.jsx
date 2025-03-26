@@ -1,8 +1,17 @@
+// localStorage.clear();
+
 const employee = [
     {
         "id": 1,
-        "email": "employee1@example.com",
+        "firstName": "Aarav",
+        "email": "e@e.com",
         "password": "123",
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
             {
                 "active": true,
@@ -28,8 +37,15 @@ const employee = [
     },
     {
         "id": 2,
+        "firstName": "Vihaan",
         "email": "employee2@example.com",
         "password": "123",
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
             {
                 "active": true,
@@ -55,8 +71,15 @@ const employee = [
     },
     {
         "id": 3,
+        "firstName": "Ishaan",
         "email": "employee3@example.com",
         "password": "123",
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 1
+        },
         "tasks": [
             {
                 "active": false,
@@ -82,8 +105,15 @@ const employee = [
     },
     {
         "id": 4,
+        "firstName": "Kavya",
         "email": "employee4@example.com",
         "password": "123",
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 0,
+            "failed": 0
+        },
         "tasks": [
             {
                 "active": true,
@@ -109,8 +139,15 @@ const employee = [
     },
     {
         "id": 5,
+        "firstName": "Ananya",
         "email": "employee5@example.com",
         "password": "123",
+        "taskNumbers": {
+            "active": 1,
+            "newTask": 1,
+            "completed": 1,
+            "failed": 0
+        },
         "tasks": [
             {
                 "active": false,
@@ -134,7 +171,8 @@ const employee = [
             }
         ]
     }
-]
+];
+
 
 
 const admin = [{
