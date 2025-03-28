@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useReducer, useState } from 'react'
 import Login from './components/Auth/Login'
 import EmployeeDashboard from './components/Dashboard/EmployeeDashboard'
 import AdminDashboard from './components/Dashboard/AdminDashboard'
@@ -18,15 +18,15 @@ const App = () => {
   const authData = useContext(AuthContext) //to use Context
   
 
-  //checking who is logged in in Local Storage
-  // useEffect(() => {
-    
-  //   if(authData){
-  //     const loggedInUser = localStorage.getItem("loggedInUser")
-  //     if(loggedInUser){
-  //       setUser(loggedInUser.role) //it will change the value in the browser storage of who is loggedIn
-  //     }
-  //   }
+ useEffect(()=>{
+  const loggedInUser = localStorage.getItem('loggedInUser')
+  
+  if(loggedInUser){
+    const userData = JSON.parse(loggedInUser) //convert string into json object
+    setUser(userData.role)
+    setLoggedInUserData(userData.data)
+  }
+ },[])
 
   // }, [authData]) //if authData is present it will run again
   
@@ -42,7 +42,7 @@ const App = () => {
       if(employee){ //to check which employee is logged In
         setUser('employee')
         setLoggedInUserData(employee) //store which employee is loggedIn
-        localStorage.setItem("loggedInUser",JSON.stringify({role:'employee'}))
+        localStorage.setItem("loggedInUser",JSON.stringify({role:'employee',data:employee}))
       }
     }
     else{
