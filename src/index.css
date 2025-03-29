@@ -14,7 +14,12 @@ body{
   border-radius: 40px;
 }
 
-input , textarea , select{
-  background-color: #111;
+select{
+  background-color: white;
   color:black;
+}
+
+input, textarea{
+  background-color: #111111;
+  color:white;
 }
