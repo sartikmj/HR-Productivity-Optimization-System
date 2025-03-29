@@ -15,7 +15,7 @@ const App = () => {
   
   const [user , setUser] = useState(null)
   const [loggedInUserData , setLoggedInUserData] = useState(null)
-  const authData = useContext(AuthContext) //to use Context
+  const [userData,setUserData] = useContext(AuthContext) //to use Context
   
 
  useEffect(()=>{
@@ -37,8 +37,8 @@ const App = () => {
       setUser('admin')
       localStorage.setItem("loggedInUser",JSON.stringify({role:'admin'})) //add another key in data named loggedInUser with value {role:admin}
     }
-    else if(authData && authData.employees){
-      const employee = authData.employees.find((e)=>email==e.email&& e.password==password)
+    else if(userData){
+      const employee = userData.find((e)=>email==e.email&& e.password==password)
       if(employee){ //to check which employee is logged In
         setUser('employee')
         setLoggedInUserData(employee) //store which employee is loggedIn
@@ -62,6 +62,7 @@ const App = () => {
       {/* passed handleLogin function inside Login component by the name of handleLogin */}
       {/* <EmployeeDashboard /> */}
       {/* <AdminDashboard /> */}
+      
     </>
   )
 }
